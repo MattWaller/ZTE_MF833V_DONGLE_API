@@ -5,14 +5,13 @@ dongle api controls for zte mf833v mobile internet sticks - only tested on UBUNT
 <p>to use:</p>
 <code>
 from mobileRestarter import mobileRestarter
-
+<br />
 mr = mobileRestarter()
 </code>
 <p>Get all your usb dongles --> assumes that all your dongles are mf833v -- won't be accurate if you mix and match.</p>
 <code>
 print(mr.getAllRoutes())
-</code>
-<code>
+<br />
 {3: {'description': 'Ethernet interface', 'physical id': '1', 'bus info': 'usb@1:2', 'logical name': 'usb0', 'serial': '96:cf:c0:b3:81:ed', 'capabilities': 'ethernet physical', 'configuration': {'autonegotiation': 'off', 'broadcast': 'yes', 'driver': 'cdc_ether', 'driverversion': '5.18.0-16.1-liquorix-amd64', 'duplex': 'half', 'firmware': 'ZTE CDC Ethernet Device', 'ip': '192.168.10.110', 'link': 'yes', 'multicast': 'yes'}, 'gateway': '192.168.10.1'}}
 </code>
 
@@ -21,14 +20,10 @@ Changing gateway ip range of mf833v: for example taking 192.168.10.1 to 192.168.
 </p>
 <code>
 old_gateway = '192.168.10.1'
-</code>
-<code>
-<p>
+<br />
 new_gateway = '192.168.7.1'
-</p>
-<p>
+<br />
 mr.change_gateway(old_gateway,new_gateway)
-</p>
 </code>
 
 <p>mr.reset_wan(ip)
@@ -37,6 +32,7 @@ Resetting / changing IP address of the dongle on a specific gateway range.
 
 <code>
 ip = '192.168.7.1' # this is the gateway. 
+<br />
 mr.reset_wan(ip)
 </code>
 
@@ -46,6 +42,7 @@ Other controls:
 
 <code>
 mr.connect(ip) # connects disconnected gateway
+<br />
 mr.disconnect(ip) # disconnects gateway
 </code>
 
