@@ -23,10 +23,12 @@ Changing gateway ip range of mf833v: for example taking 192.168.10.1 to 192.168.
 old_gateway = '192.168.10.1'
 </code>
 <code>
+<p>
 new_gateway = '192.168.7.1'
-</code>
-<code>
+</p>
+<p>
 mr.change_gateway(old_gateway,new_gateway)
+</p>
 </code>
 
 <p>mr.reset_wan(ip)
@@ -35,8 +37,6 @@ Resetting / changing IP address of the dongle on a specific gateway range.
 
 <code>
 ip = '192.168.7.1' # this is the gateway. 
-</code>
-<code>
 mr.reset_wan(ip)
 </code>
 
@@ -46,8 +46,6 @@ Other controls:
 
 <code>
 mr.connect(ip) # connects disconnected gateway
-</code>
-<code>
 mr.disconnect(ip) # disconnects gateway
 </code>
 
